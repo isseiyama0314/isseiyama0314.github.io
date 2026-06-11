@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山口 一青 | Issei Yamaguchi — Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f3ec; --paper2:#efebe1; --card:#fcfaf5;
+  --ink:#1f2433; --ink2:#3a4054; --muted:#6b6f7e; --faint:#9a9caa;
+  --line:#d9d3c5; --line2:#e7e1d4;
+  --navy:#27324d; --accent:#7a2f39; --accent2:#9c6b3e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:'EB Garamond','Noto Serif JP',Georgia,serif;
+  font-size:18px; line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(122,47,57,.15)}
+.serif{font-family:'Cormorant Garamond','Noto Serif JP',serif}
+nav{position:sticky;top:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px clamp(20px,5vw,60px);
+  background:rgba(246,243,236,.88);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);}
+.brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:21px;letter-spacing:.5px;color:var(--navy)}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:30px;font-size:15px;letter-spacing:.3px}
+.navlinks a{color:var(--ink2);transition:.2s;position:relative;padding-bottom:3px}
+.navlinks a:hover{color:var(--accent)}
+.navlinks a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent);transition:.25s}
+.navlinks a:hover::after{width:100%}
+@media(max-width:760px){.navlinks{display:none}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,60px)}
+header{padding:clamp(70px,11vw,130px) 0 clamp(50px,8vw,90px);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-family:'EB Garamond',serif;margin-bottom:26px;font-weight:600}
+h1.name{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:600;
+  font-size:clamp(44px,8vw,86px);line-height:1.04;color:var(--navy);letter-spacing:.5px;margin-bottom:6px}
+.name .en{display:block;font-style:italic;font-size:clamp(26px,4.5vw,46px);color:var(--ink2);font-weight:500;margin-top:6px}
+.role{font-size:17px;color:var(--muted);letter-spacing:1px;margin:22px 0 30px;font-style:italic}
+.lead{font-size:clamp(18px,2.2vw,21px);color:var(--ink2);max-width:720px;line-height:1.85}
+.lead b{color:var(--ink);font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:15px;letter-spacing:.5px;transition:.22s;border:1px solid var(--navy);border-radius:2px}
+.btn-p{background:var(--navy);color:var(--paper)}
+.btn-p:hover{background:var(--accent);border-color:var(--accent)}
+.btn-g{color:var(--navy)}
+.btn-g:hover{background:var(--navy);color:var(--paper)}
+section{padding:clamp(56px,8vw,88px) 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:46px}
+.sec-num{font-size:14px;color:var(--accent);font-weight:600;letter-spacing:1px;font-variant-numeric:tabular-nums}
+.sec-title{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:clamp(28px,4.5vw,42px);font-weight:600;color:var(--navy);letter-spacing:.5px}
+.sec-line{flex:1;height:1px;background:var(--line);align-self:center}
+.about-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:54px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+.about-txt p{color:var(--ink2);margin-bottom:20px}
+.about-txt p b{color:var(--ink);font-weight:600}
+.kw{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.kw span{font-size:14px;padding:6px 15px;border:1px solid var(--line);border-radius:2px;color:var(--ink2);background:var(--card);letter-spacing:.3px}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:8px 28px}
+.info-row{padding:16px 0;border-bottom:1px solid var(--line2)}
+.info-row:last-child{border:none}
+.info-row .k{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-family:'EB Garamond',serif;margin-bottom:3px}
+.info-row .v{font-size:16px;color:var(--ink);line-height:1.5}
+.info-row .v a{color:var(--accent);border-bottom:1px solid rgba(122,47,57,.3)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:50px;border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--card)}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{padding:26px 24px;border-right:1px solid var(--line2);text-align:center}
+.stat:last-child{border-right:none}
+@media(max-width:760px){.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line2)}}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:var(--navy);line-height:1}
+.stat .l{font-size:12px;color:var(--muted);margin-top:8px;letter-spacing:.5px;text-transform:uppercase}
+.tl{position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:4px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:'';position:absolute;left:-28px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--accent)}
+.tl-item .yr{font-size:14px;color:var(--accent);font-weight:600;letter-spacing:.5px;margin-bottom:3px;font-variant-numeric:tabular-nums}
+.tl-item .ti{font-size:18px;font-weight:600;color:var(--ink)}
+.tl-item .su{font-size:15px;color:var(--muted);font-style:italic}
+.pub-list{display:flex;flex-direction:column}
+.pub{display:flex;gap:26px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line2);transition:.2s}
+.pub:last-child{border-bottom:none}
+.pub:hover{padding-left:8px}
+.pub .yr{font-size:16px;font-weight:600;color:var(--accent);min-width:50px;font-variant-numeric:tabular-nums}
+.pub .body .ti{font-size:18px;font-weight:600;color:var(--ink);line-height:1.5;margin-bottom:4px}
+.pub .body .meta{font-size:15px;color:var(--muted);font-style:italic}
+.pub .tag{font-size:11.5px;padding:2px 8px;border:1px solid var(--accent);color:var(--accent);border-radius:2px;font-weight:600;letter-spacing:.5px;margin-left:10px;font-style:normal;white-space:nowrap}
+.talk-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+@media(max-width:760px){.talk-grid{grid-template-columns:1fr}}
+.talk{background:var(--card);padding:26px 28px;transition:.22s}
+.talk:hover{background:var(--paper2)}
+.talk .venue{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent2);font-weight:600;margin-bottom:12px;font-family:'EB Garamond',serif}
+.talk .ti{font-size:17px;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.5}
+.talk .yr{font-size:14px;color:var(--muted);font-style:italic}
+.talk .inv{display:inline-block;font-size:10.5px;padding:1px 7px;border:1px solid var(--accent2);color:var(--accent2);border-radius:2px;font-weight:600;margin-left:8px;letter-spacing:.5px;font-style:normal}
+.aff{display:flex;flex-wrap:wrap;gap:10px}
+.aff span{font-size:15px;padding:9px 18px;border:1px solid var(--line);border-radius:2px;background:var(--card);color:var(--ink2);transition:.2s;letter-spacing:.3px}
+.aff span:hover{border-color:var(--navy);color:var(--navy)}
+footer{padding:64px 0 50px;text-align:center}
+footer .fname{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--navy);font-style:italic;margin-bottom:10px}
+footer .ftag{color:var(--muted);font-style:italic;margin-bottom:26px}
+.fsocial{display:flex;gap:14px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
+.fsocial a{font-size:15px;color:var(--ink2);transition:.2s;border:1px solid var(--line);padding:9px 20px;border-radius:2px}
+.fsocial a:hover{border-color:var(--accent);color:var(--accent)}
+footer .copy{font-size:13.5px;color:var(--faint);letter-spacing:.3px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">Issei <span>Yamaguchi</span></div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#research">Career</a>
+    <a href="#publications">Publications</a>
+    <a href="#talks">Talks</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<div class="wrap">
+<header>
+  <div class="eyebrow reveal">Organization Theory · Creativity · Social Networks</div>
+  <h1 class="name reveal">山口 一青<span class="en">Issei Yamaguchi</span></h1>
+  <div class="role reveal">Ph.D. Candidate, Graduate School of Economics, The University of Tokyo</div>
+  <p class="lead reveal">専門は<b>経営組織論</b>。創造的なアイデアが組織の内部で生成され、やがて事業として実現されるまでの過程 —— <b>アイデア・ジャーニー</b> を、<b>社会ネットワーク論</b>の視座から研究しています。</p>
+  <div class="cta reveal">
+    <a class="btn btn-p" href="#publications">View Publications</a>
+    <a class="btn btn-g" href="https://researchmap.jp/issei_yamaguchi" target="_blank">researchmap ↗</a>
+  </div>
+</header>
+<section id="about">
+  <div class="sec-head"><span class="sec-num">I.</span><h2 class="sec-title">About</h2><div class="sec-line"></div></div>
+  <div class="about-grid">
+    <div class="about-txt reveal">
+      <p>創作者がアイデアの段階に応じてネットワークを能動的に<b>「切り替える」</b>過程と、それを可能にする社内の<b>「場」</b>のあり方に関心を持っています。</p>
+      <p>定性的研究方法論を軸に、組織のなかで創造性がどのように立ち上がり、停滞し、そして集合的に実現されていくのかを、ミクロな実践とネットワーク構造の両面から描き出すことを目指しています。近年は<b>生成AI</b>時代における知識労働の再編や、定性研究における方法論的混合の正統性へと研究を広げています。</p>
+      <div class="kw">
+        <span>経営組織論</span><span>創造性</span><span>イノベーション</span><span>社会ネットワーク</span><span>質的研究方法論</span>
+      </div>
+    </div>
+    <div class="info-card reveal">
+      <div class="info-row"><div class="k">Affiliation</div><div class="v">東京大学 大学院経済学研究科 博士課程</div></div>
+      <div class="info-row"><div class="k">Degree</div><div class="v">修士（経営学）／ The University of Tokyo</div></div>
+      <div class="info-row"><div class="k">Field</div><div class="v">人文・社会 ／ 経営学</div></div>
+      <div class="info-row"><div class="k">ORCID</div><div class="v"><a href="https://orcid.org/0009-0008-4107-4299" target="_blank">0009-0008-4107-4299</a></div></div>
+    </div>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><div class="n">6</div><div class="l">Papers</div></div>
+    <div class="stat"><div class="n">9+</div><div class="l">Major Talks</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">Societies</div></div>
+    <div class="stat"><div class="n">2024</div><div class="l">Ph.D. Started</div></div>
+  </div>
+</section>
+<section id="research">
+  <div class="sec-head"><span class="sec-num">II.</span><h2 class="sec-title">Education &amp; Career</h2><div class="sec-line"></div></div>
+  <div class="tl reveal">
+    <div class="tl-item"><div class="yr">2024.4 — Present</div><div class="ti">東京大学 大学院経済学研究科 博士課程</div><div class="su">Doctoral Program, Graduate School of Economics, The University of Tokyo</div></div>
+    <div class="tl-item"><div class="yr">2025.6 — Present</div><div class="ti">Global Business Research Center (GBRC) 運営委員</div><div class="su">Steering Committee Member</div></div>
+    <div class="tl-item"><div class="yr">2022.4 — 2024.3</div><div class="ti">東京大学 大学院経済学研究科 修士課程</div><div class="su">Master's Program — M.A. in Management</div></div>
+    <div class="tl-item"><div class="yr">2018.4 — 2022.3</div><div class="ti">青山学院大学 経営学部 マーケティング学科</div><div class="su">Aoyama Gakuin University, School of Business</div></div>
+  </div>
+</section>
+<section id="publications">
+  <div class="sec-head"><span class="sec-num">III.</span><h2 class="sec-title">Publications</h2><div class="sec-line"></div></div>
+  <div class="pub-list">
+    <div class="pub reveal"><div class="yr">2026</div><div class="body"><div class="ti">質的研究におけるAI利用は何が問題で、何が問題ではないのか —認識論に基づく主要論点の体系的検討を通じて—<span class="tag">First / Corresponding</span></div><div class="meta">山口 一青 — Jxiv（JSTプレプリントサーバ）</div></div></div>
+    <div class="pub reveal"><div class="yr">2026</div><div class="body"><div class="ti">組織的アイディエーションはなぜ停滞するか —3社の事例分析—<span class="tag">First / Corresponding</span></div><div class="meta">山口 一青, 大蔵 悠之 — MMRC Discussion Paper Series (578)</div></div></div>
+    <div class="pub reveal"><div class="yr">2025</div><div class="body"><div class="ti">棚田と『ベンチャー型』企業組合 —社内コミュニティスペースから発足した新興企業組合の事例—</div><div class="meta">Issei Yamaguchi</div></div></div>
+    <div class="pub reveal"><div class="yr">2025</div><div class="body"><div class="ti">イノベーション行動を喚起・継続する仕組みを生み出す！余白を許す文化づくり</div><div class="meta">Issei Yamaguchi</div></div></div>
+    <div class="pub reveal"><div class="yr">2024</div><div class="body"><div class="ti">二重のネットワーキングとは何か — 経営学輪講 Ter Wal, Criscuolo, McEvily, and Salter (2020)<span class="tag">First / Corresponding</span></div><div class="meta">赤門マネジメントレビュー 23(3) 87–101</div></div></div>
+    <div class="pub reveal"><div class="yr">2024</div><div class="body"><div class="ti">事業創造プロセスにおける社会ネットワークのダイナミクスに関する研究</div><div class="meta">修士論文 — The University of Tokyo</div></div></div>
+  </div>
+</section>
+<section id="talks">
+  <div class="sec-head"><span class="sec-num">IV.</span><h2 class="sec-title">Selected Talks</h2><div class="sec-line"></div></div>
+  <div class="talk-grid reveal">
+    <div class="talk"><div class="venue">Academy of Management 2026</div><div class="ti">Citation as Norm-Constitution: Legitimizing Methodological Mixing Without Justification</div><div class="yr">The 86th Annual Meeting of AOM · 2026.7</div></div>
+    <div class="talk"><div class="venue">EGOS Colloquium 2026</div><div class="ti">From Ambiguity to Infrastructure: How Non-technical Brokers Reconfigure Knowledge Work in Generative AI Adoption</div><div class="yr">The 42nd EGOS Colloquium · 2026.7</div></div>
+    <div class="talk"><div class="venue">EGOS PhD Workshop 2026</div><div class="ti">From Ideas to Innovation Collectively: How Corporate Community Spaces Enable Social Network Switching</div><div class="yr">Pre-Colloquium PhD Workshop · 2026.7</div></div>
+    <div class="talk"><div class="venue">Academy of Management 2024</div><div class="ti">Navigating Network Dynamics: Understanding Social Network Switching in the Idea Journey</div><div class="yr">The 86th Annual Meeting of AOM · 2024.8</div></div>
+    <div class="talk"><div class="venue">組織学会研究発表大会 2024</div><div class="ti">創造的なアイデアを実現するための社会ネットワークの切り替え — 業務外活動を支援する社内スペースの事例研究</div><div class="yr">2024年度組織学会 · 2024.6</div></div>
+    <div class="talk"><div class="venue">BRIDGE TERMINAL</div><div class="ti">創造的なアイデアを実現するための社会ネットワークの切り替え<span class="inv">Invited</span></div><div class="yr">講演会 · 2024.10</div></div>
+  </div>
+</section>
+<section id="contact">
+  <div class="sec-head"><span class="sec-num">V.</span><h2 class="sec-title">Memberships</h2><div class="sec-line"></div></div>
+  <div class="aff reveal">
+    <span>INFORMS</span><span>European Group for Organization Studies (EGOS)</span><span>Academy of Management (AOM)</span><span>経営行動科学学会</span><span>組織学会</span><span>日本行動計量学会</span>
+  </div>
+</section>
+</div>
+<footer>
+  <div class="fname">Issei Yamaguchi</div>
+  <p class="ftag">創造性とイノベーションの組織論を、ネットワークの視座から。</p>
+  <div class="fsocial">
+    <a href="https://researchmap.jp/issei_yamaguchi" target="_blank">researchmap ↗</a>
+    <a href="https://orcid.org/0009-0008-4107-4299" target="_blank">ORCID ↗</a>
+    <a href="http://linkedin.com/in/issei-yamaguchi-9753591b4" target="_blank">LinkedIn ↗</a>
+  </div>
+  <p class="copy">© 2026 Issei Yamaguchi · 東京大学大学院経済学研究科</p>
+</footer>
+<script>
+(function(){
+  var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){ els.forEach(function(e){ e.classList.add('in'); }); }
+  if(!('IntersectionObserver' in window)){ showAll(); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:0.08, rootMargin:'0px 0px -5% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+  window.addEventListener('load', function(){
+    els.forEach(function(e){
+      var r = e.getBoundingClientRect();
+      if(r.top < window.innerHeight && r.bottom > 0){ e.classList.add('in'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
